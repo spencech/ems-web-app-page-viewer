@@ -12,7 +12,6 @@ Also note that styling options are limited, and will need to be customized in yo
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
-
 **Note that this module has a peer dependency on ems-web-app-utils and underscore.js**
 
 	npm -i underscore ems-web-app-utils ems-web-app-page-viewer
