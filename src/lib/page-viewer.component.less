@@ -1,0 +1,16 @@
+:host {
+	transition: opacity 0.25s;
+	transition-property: opacity;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	width: 100%;
+	overflow: auto;
+}
+
+:host.transitioning {
+	transition-property: opacity;
+	opacity: 0;
+	transition: opacity 0.25s;
+	pointer-events: none;
+}
