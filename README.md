@@ -42,7 +42,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 ## Component Implementation
 
 	import { Component } from '@angular/core';
-	import { PageViewerService } from "PageViewer";
+	import { PageViewerService } from "ems-web-app-page-viewer";
 
 	@Component({
 	  selector: 'app-root',
