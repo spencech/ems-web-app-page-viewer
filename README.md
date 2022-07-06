@@ -14,7 +14,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 **Note that this module has a peer dependency on ems-web-app-utils and underscore.js**
 
-	npm -i underscore ems-web-app-utils ems-web-app-page-viewer
+	npm i underscore ems-web-app-utils ems-web-app-page-viewer
 
 ## Module Implementation
 
