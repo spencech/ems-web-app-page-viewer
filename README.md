@@ -1,6 +1,10 @@
 # EMS Web Application Components: PageViewer
 
-The PageViewer Angular.io module is authored for use within [web applications](https://github.com/spencech/ems-web-app-template) developed by [Educational Media Solutions](https://educationalmediasolutions.com).
+The PageViewer Angular.io module is authored for use within web applications developed by [Educational Media Solutions](https://educationalmediasolutions.com).
+
+Find the [web application template source code on GitHub](https://github.com/spencech/ems-web-app-template) to review implementation in context.
+
+Find a [working example of this component here](https://ems-web-app.educationalmediasolutions.com).
 
 The embedded component and service expose interfaces for rendering dynamic page content and managing browser history.
 
