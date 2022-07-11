@@ -1,10 +1,14 @@
 {
   "name": "ems-web-app-page-viewer",
   "version": "0.0.5",
+  "author": "Chris Spence (https://educationalmediasolutions.com)",
+  "description": "This angular.io module is a simple page renderer for apps developed by Educational Media Solutions.",
+  "funding": "https://paypal.me/spencech",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0",
-    "ems-web-app-utils": "^0.0.19",
+    "ems-web-app-utils": "^0.0.20",
     "underscore": "^1.13.4"
   },
   "dependencies": {
@@ -28,6 +32,9 @@
     "page viewer",
     "navigation",
     "routing",
-    "route"
+    "route",
+    "angular.io",
+    "angular",
+    "module"
   ]
 }
