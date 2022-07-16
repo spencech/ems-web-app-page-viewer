@@ -3,6 +3,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { PageViewerService } from "./page-viewer.service";
 import { trace, delay, getparams } from "ems-web-app-utils";
 
+declare const gtag:any;
+
 @Component({
   selector: 'page-viewer',
   template: `<ng-container *ngIf="currentTemplate"><ng-container *ngTemplateOutlet="currentTemplate"></ng-container></ng-container><ng-content></ng-content><div class="style-container" [innerHtml]="styles"></div>`,
@@ -17,6 +19,7 @@ export class PageViewerComponent implements AfterViewInit {
   public currentPage: string | null = null;
   public currentTemplate!: TemplateRef<any>;
   public styles!: SafeHtml;
+  public google?: any;
 
   protected timeout: number = 0;
   protected speed: number = 250;
@@ -27,6 +30,7 @@ export class PageViewerComponent implements AfterViewInit {
 
   ngOnInit() {
     this.service.storeWebHistory = this.history;
+    this.google = (window as any)["gtag"] ?? undefined;
 
     this.service.page.subscribe((page: string | null) => {
       clearTimeout(this.timeout);
@@ -58,10 +62,16 @@ export class PageViewerComponent implements AfterViewInit {
     delay(() => {
       this.currentPage = page; 
       this.currentTemplate = this.service.manifest[page ?? ""]?.template;
+      this.track();
     });
     delay(() => {
       this.transitioning = false;
       this.onChange.emit(this.currentPage);
     }, 1);
+  }
+
+  protected track() {
+    if(!this.google || !this.currentPage) return;
+    this.google('event', 'page_view', { page_title: this.currentPage, page_location: `${window.location.origin}/pages/${this.currentPage}`})
   }
 }
