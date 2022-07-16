@@ -8,6 +8,8 @@ Find a [working example of this component here](https://ems-web-app.educationalm
 
 The embedded component and service expose interfaces for rendering dynamic page content and managing browser history.
 
+When present on the containing page, Google Analytics page_view events are fired for each page change (with values that correspond to the page identifier, e.g., "page-1" below).
+
 You can likely achieve comparable outcomes with angular routing, but we extend this simple implementation to meet custom client requirements for navigation and accessibility.
 
 **Note that this component currently supports only a single implementation per application**, i.e., you can't have two separate page viewers on a single screen.
