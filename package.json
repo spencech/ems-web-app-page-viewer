@@ -8,8 +8,8 @@
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0",
-    "ems-web-app-utils": "^0.0.20",
-    "underscore": "^1.13.4"
+    "underscore": "^1.13.4",
+    "ems-web-app-utils": "^0.0.21"
   },
   "dependencies": {
     "tslib": "^2.3.0"
