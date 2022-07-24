@@ -75,16 +75,20 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 	<page-viewer class="content-panel" [history]="true">
 		<page-template id="page-1" title="Page 1">
-			<app-page1></app-page1> <!-- custom component -->
+			<ng-template>
+				<app-page1></app-page1>
+			</ng-template> <!-- custom component -->
 		</page-template>
 		<page-template id="page-2">
-			<!-- static html -->
-			<h1>Page 2 {{ title }}</h1>
-			<div>Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</div>
+			<ng-template>
+				<!-- static html -->
+				<h1>Page 2 {{ title }}</h1>
+				<div>Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</div>
+			</ng-template>
 		</page-template>
 	</page-viewer>
 
-Under the hood, the "page-template" component converts nested content to an ng-template, that is registered with the PageViewerService and rendered by the PagerViewerComponent.
+Note that you must include the ng-template container around your content to prevent it from instantiating prematurely. This template is registered with the PageViewerService and rendered by the PagerViewerComponent.
 
 **Every &lt;page-template/&gt; node must define an "id" attribute**
 
