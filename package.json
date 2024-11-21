@@ -1,6 +1,6 @@
 {
   "name": "ems-web-app-page-viewer",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "author": "Chris Spence (https://educationalmediasolutions.com)",
   "description": "This angular.io module is a simple page renderer for apps developed by Educational Media Solutions.",
   "funding": "https://paypal.me/spencech",
