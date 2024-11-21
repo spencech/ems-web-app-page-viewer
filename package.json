@@ -8,10 +8,10 @@
   "peerDependencies": {
     "@angular/common": "^13.2.0 || ^14.0.0 || ^15.0.0 || ^16.0.0  || ^17.0.0  || ^18.0.0",
     "@angular/core": "^13.2.0 || ^14.0.0 || ^15.0.0 || ^16.0.0  || ^17.0.0  || ^18.0.0",
-    "underscore": "^1.13.4",
-    "ems-web-app-utils": "^0.0.24"
+    "underscore": "^1.13.4"
   },
   "dependencies": {
+    "ems-web-app-utils": "^0.0.27",
     "tslib": "^2.3.0"
   },
   "repository": {
@@ -19,7 +19,7 @@
     "url": "https://github.com/spencech/ems-web-app-page-viewer.git"
   },
   "scripts": {
-    "publish": "git add -A . && git commit -m 'prepublish npm package' && npm version patch && ng build PageViewer && cd dist && npm publish"
+    "publish-npm": "git add -A . && git commit -m 'prepublish npm package' && npm version patch && ng build PageViewer && cd dist && npm publish"
   },
   "keywords": [
     "ems",
